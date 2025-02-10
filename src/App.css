@@ -1,38 +1,89 @@
-.App {
-  text-align: center;
-}
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Chettan+2&family=Calligraffitti&display=swap");
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  height: 60vmin;
+  /* pointer-events: none; */
+  position: relative;
+  z-index: 100;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  background: linear-gradient(45deg, rgb(133, 9, 113), rgb(105, 91, 205));
+  width: 100vw;
+  height: 100vh;
+  margin: 0px;
+  overflow: hidden;
+  text-align: center;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+#container {
+  min-width: 30%;
+  min-height: 50%;
+  backdrop-filter: blur(14px);
+  background: rgba(255, 255, 255, 0.45);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border-radius: 20px;
+  z-index: 10 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 30px;
+  padding: 5px 10px;
+  font-family: "Poppins", sans-serif;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.fa-heart {
+  color: rgb(60, 0, 60);
+  font-size: 25px;
+  position: absolute;
+  animation: heartMove linear 1;
+  top: -10vh;
+  z-index: 0;
+}
+
+.fa-solid {
+  z-index: 0;
+}
+
+@keyframes heartMove {
+  0% {
+    transform: translateY(-10vh);
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    transform: translateY(110vh);
   }
+}
+
+@media (min-width: 768px) {
+  button {
+    padding: 0 40px;
+  }
+}
+
+.valentine {
+  font-family: "Calligraffitti", cursive;
+  font-weight: 700;
+  font-size: 4rem;
+  position: absolute;
+  text-shadow: -5px 2px 7px #ced0d3;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #f9f1cc;
+  text-shadow: 2px 2px 0px #ffb650, 4px 4px 0px #ffd662, 6px 6px 0px #ff80bf,
+    8px 8px 0px #ef5097, 10px 10px 0px #6868ac;
+}
+.pre-valentine {
+  position: absolute;
+  text-align: center;
+  font-weight: 700;
+  font-size: 2rem;
+  top: 30%;
+  left: 43%;
 }
